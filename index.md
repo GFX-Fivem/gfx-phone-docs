@@ -1,5 +1,5 @@
 ---
-title: Home
+title: GFX Phone Docs
 nav_order: 1
 description: "GFX Phone documentation: install the iOS-style FiveM phone on QBCore, Qbox or ESX, set it up from the web or in-game admin panel, and build custom phone apps with the SDK."
 permalink: /
