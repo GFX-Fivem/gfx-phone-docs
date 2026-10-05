@@ -1,7 +1,7 @@
 title: GFX Phone Docs
 tagline: FiveM Phone for QBCore, Qbox and ESX
 description: >-
-  Documentation for GFX Phone, the iOS-style phone for FiveM (QBCore, Qbox, ESX): installation,
+  Documentation for GFX Phone, the modern smartphone for FiveM (QBCore, Qbox, ESX): installation,
   the admin panel, configuration, exports and the custom apps SDK.
 url: https://gfx-fivem.github.io
 baseurl: /gfx-phone-docs
@@ -52,7 +52,7 @@ gh_edit_branch: main
 gh_edit_view_mode: blob
 
 footer_content: >-
-  <a href="https://gfxscripts.com/phone">GFX Phone</a> - the iOS-style FiveM phone for QBCore, Qbox
+  <a href="https://gfxscripts.com/phone">GFX Phone</a> - the modern FiveM smartphone for QBCore, Qbox
   and ESX by <a href="https://gfxscripts.com">GFX Scripts</a>.
   Documentation, SDK and examples are MIT licensed.
 

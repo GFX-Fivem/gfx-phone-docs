@@ -22,20 +22,20 @@ It returns `true`, or `false, err`.
 | `ground` | Colour under the page while it loads: `'#fff'` or `{ light = '#fff', dark = '#000' }`. |
 | `darkSurface` | `true` when the app is always dark (white status bar icons). |
 | `offline` | `true` = opens without a signal (no "No Connection" screen). |
-| `defaultApp` | `true` = installed on every phone and cannot be deleted. `false` = listed in the [App Store](app-store.md). |
-| `subtitle`, `description`, `developer`, `version`, `ageRating` | App Store texts (`subtitle` / `description` can be per language like `label`). |
+| `defaultApp` | `true` = installed on every phone and cannot be deleted. `false` = listed in the [Apps store](app-store.md). |
+| `subtitle`, `description`, `developer`, `version`, `ageRating` | Apps store texts (`subtitle` / `description` can be per language like `label`). |
 | `category` | `social`, `utility`, `finance`, `media` or `game`. |
 | `permissions` | What the page may use (below). Default `{ 'notifications', 'island' }`. |
 | `widgets` | Home-screen widgets - see [Widgets](widgets.md). |
 | `onOpen()` / `onClose()` | The page was loaded / closed (or the phone put away). |
 | `onMessage(action, data)` | `GFXPhone.send(action, data)` from the page; the return value goes back. |
-| `onIslandAction(key, button)` | A button on your Dynamic Island activity was tapped. |
+| `onIslandAction(key, button)` | A button on your Lemon Pulse activity was tapped. |
 
 Server registration only:
 
 | Field | Meaning |
 |-------|---------|
-| `price` | App Store price. |
+| `price` | Apps store price. |
 | `serverPaymentsOnly` | `true` = the page can only pay payments your server created. |
 | `onPayment(src, payment)` | A payment went through; return `false` to refund it at once. See [Payments](payments.md). |
 
@@ -62,7 +62,7 @@ battery need no permission. A call the app has no permission for fails with `not
 ## Client or server registration?
 
 - **Client only** - the simplest: an app that needs nothing from the server.
-- **Client + server** (same `id`, same resource) - adds an App Store price, the admin panel's App
+- **Client + server** (same `id`, same resource) - adds an app store price, the admin panel's App
   access switch, server-charged payments and the server exports
   (`SendCustomAppNotification(src, ...)`, `UpdateCustomAppWidget(src, ...)`...). The server's fields
   win; callbacks stay on the side that registered them.

@@ -1,13 +1,13 @@
 ---
-title: "App Store Listing"
+title: "Apps Store Listing"
 parent: Custom Apps
 grand_parent: Developers
 nav_order: 8
-description: "List and sell your custom app in the GFX Phone App Store."
+description: "List and sell your custom app in the GFX Phone Apps store."
 ---
-# Listing Your App in the GFX Phone App Store
+# Listing Your App in the GFX Phone Apps Store
 
-Instead of putting your app on every home screen, you can list it in the phone's App Store: players
+Instead of putting your app on every home screen, you can list it in the phone's Apps store: players
 find it, tap **GET** (or buy it) and can delete it later.
 
 ```lua
@@ -22,14 +22,14 @@ exports['gfx-phone']:AddCustomApp({
     category = 'utility',               -- social, utility, finance, media, game
     ui = 'ui/index.html',
     icon = 'ui/icon.png',
-    defaultApp = false,                 -- = App Store listing
+    defaultApp = false,                 -- = Apps store listing
     price = 4.99,                       -- server registration only
 })
 ```
 
 - **Free listing:** register with `defaultApp = false` (client or server).
 - **Paid listing:** register on the server with a `price`. The server owner can override it in
-  `Config.AppStore.Prices` / `Subscriptions` (admin panel > App Store) - the config wins.
+  `Config.AppStore.Prices` / `Subscriptions` (admin panel > Apps store) - the config wins.
 - Buying goes through the same Lemon Pay sheet as the built-in apps; ownership, redownloads,
   downloads and star ratings work the same way.
 - An app registered only on the client is listed free and its downloads are not counted.

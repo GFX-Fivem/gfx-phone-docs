@@ -3,7 +3,7 @@ title: Custom Apps
 parent: Developers
 nav_order: 4
 has_children: true
-description: "Build your own FiveM phone apps for GFX Phone with HTML, React or Vue: JavaScript SDK, notifications, Dynamic Island, widgets, camera, Lemon Pay payments."
+description: "Build your own FiveM phone apps for GFX Phone with HTML, React or Vue: JavaScript SDK, notifications, Lemon Pulse, widgets, camera, Lemon Pay payments."
 ---
 
 # Custom Apps - Build Your Own FiveM Phone Apps
@@ -17,7 +17,7 @@ SDK gives the page the phone's features. Custom apps are free on every GFX Phone
 | Feature | SDK call | Permission |
 |---|---|---|
 | Push notifications | `GFXPhone.notify()` | `notifications` |
-| Dynamic Island live activities | `GFXPhone.island.start()` | `island` |
+| Lemon Pulse activities | `GFXPhone.island.start()` | `island` |
 | Home-screen widgets | `GFXPhone.widgets.update()` | - |
 | Light / dark theme, accent, text size, RTL | `GFXPhone.applyTheme()` | - |
 | Phone camera | `GFXPhone.camera.takePhoto()` | `camera` |

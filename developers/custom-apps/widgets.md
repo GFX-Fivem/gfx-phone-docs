@@ -3,11 +3,11 @@ title: "Widgets"
 parent: Custom Apps
 grand_parent: Developers
 nav_order: 6
-description: "iOS-style home-screen widgets for FiveM phone apps: templates, data and updates from Lua or the page."
+description: "Home-screen widgets for FiveM phone apps: templates, data and updates from Lua or the page."
 ---
 # Home-Screen Widgets for FiveM Phone Apps
 
-Your custom app can offer iOS-style home-screen widgets on [GFX Phone](https://gfxscripts.com/phone).
+Your custom app can offer home-screen widgets on [GFX Phone](https://gfxscripts.com/phone).
 The phone draws them from a template - your page is never loaded for a widget - so they cost nothing
 while your app is closed and can be updated straight from Lua.
 

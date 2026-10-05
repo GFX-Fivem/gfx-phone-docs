@@ -1,6 +1,6 @@
 # GFX Phone Documentation - FiveM Phone for QBCore, Qbox and ESX
 
-**The official documentation of [GFX Phone](https://gfxscripts.com/phone), the modern iOS-style phone
+**The official documentation of [GFX Phone](https://gfxscripts.com/phone), the modern smartphone
 for FiveM roleplay servers.** Installation and the admin panel for server owners, every export and
 event for developers, and the SDK to build your own phone apps.
 
@@ -34,7 +34,7 @@ Install the phone and set it up from your browser or in game - no coding needed.
 - [Client exports](https://gfx-fivem.github.io/gfx-phone-docs/developers/client-exports.html) - signal, Wi-Fi, battery, voice quality
 - [Events](https://gfx-fivem.github.io/gfx-phone-docs/developers/events.html) - calls and voice routing, SIM / device changes, invoices
 - [Custom apps](https://gfx-fivem.github.io/gfx-phone-docs/developers/custom-apps/) - build your own phone app with HTML / React / Vue:
-  notifications, Dynamic Island, home-screen widgets, camera, Lemon Pay payments
+  notifications, Lemon Pulse, home-screen widgets, camera, Lemon Pay payments
 
 ```lua
 AddEventHandler('gfx-phone:client:customAppsReady', function()
@@ -51,13 +51,13 @@ end)
 |---|---|
 | [`server-owners/`](server-owners) | Installation and admin guides (the site's source) |
 | [`developers/`](developers) | Exports, events and custom apps guides |
-| [`examples/tip-jar`](examples/tip-jar) | A complete custom app resource: payments, Dynamic Island, camera, widget |
+| [`examples/tip-jar`](examples/tip-jar) | A complete custom app resource: payments, Lemon Pulse, camera, widget |
 | [`sdk/`](sdk) | The custom app SDK script and its TypeScript types |
 
 ## About GFX Phone
 
 [GFX Phone](https://gfxscripts.com/phone) brings a full smartphone to FiveM: calls and video calls,
-Messages, social apps, Lemon Pay banking, vehicles and housing, an App Store, Dynamic Island,
+Messages, social apps, Lemon Pay banking, vehicles and housing, an app store, Lemon Pulse,
 home-screen widgets, 13 languages and a web + in-game admin panel. Made by
 [GFX Scripts](https://gfxscripts.com).
 
@@ -74,4 +74,4 @@ resource: [gfxscripts.com/phone](https://gfxscripts.com/phone).
 
 **Keywords:** FiveM phone, FiveM phone script, QBCore phone, Qbox phone, ESX phone, FiveM phone
 installation, FiveM phone exports, FiveM custom phone apps, FiveM NUI app, GTA V roleplay phone,
-iOS phone for FiveM.
+smartphone for FiveM.

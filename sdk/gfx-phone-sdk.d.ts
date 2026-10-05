@@ -97,7 +97,7 @@ export interface GFXPhoneContext {
   device: {
     width: number
     height: number
-    /** Keep content clear of the status bar / Dynamic Island and the home indicator. */
+    /** Keep content clear of the status bar / Lemon Pulse and the home indicator. */
     safeTop: number
     safeBottom: number
     /** Your frame's width in the phone's layout pixels. */

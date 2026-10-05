@@ -1,14 +1,14 @@
 ---
 title: GFX Phone Docs
 nav_order: 1
-description: "GFX Phone documentation: install the iOS-style FiveM phone on QBCore, Qbox or ESX, set it up from the web or in-game admin panel, and build custom phone apps with the SDK."
+description: "GFX Phone documentation: install the modern FiveM smartphone on QBCore, Qbox or ESX, set it up from the web or in-game admin panel, and build custom phone apps with the SDK."
 permalink: /
 ---
 
 # GFX Phone Documentation
 {: .fs-9 }
 
-The modern, iOS-style phone for FiveM roleplay servers - QBCore, Qbox and ESX.
+The modern smartphone for FiveM roleplay servers - QBCore, Qbox and ESX.
 {: .fs-6 .fw-300 }
 
 [Install GFX Phone](server-owners/installation.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -18,8 +18,8 @@ The modern, iOS-style phone for FiveM roleplay servers - QBCore, Qbox and ESX.
 ---
 
 [GFX Phone](https://gfxscripts.com/phone) brings a full smartphone to your FiveM server: calls and
-video calls, Messages, social apps, Lemon Pay banking, vehicles and housing, an App Store, Dynamic
-Island, home-screen widgets, 13 languages and an admin panel you can use in game or from the web.
+video calls, Messages, social apps, Lemon Pay banking, vehicles and housing, an app store, Lemon
+Pulse, home-screen widgets, 13 languages and an admin panel you can use in game or from the web.
 You can try it in your browser on the [live demo](https://gfxscripts.com/phone).
 
 ## For server owners

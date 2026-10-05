@@ -14,9 +14,9 @@ download or a restart.
 ## What the free version includes
 
 Phone (calls, video calls, contacts), Messages, Camera, Photos, Maps, Weather, Clock, Notes, Calendar,
-Wallet (Lemon Pay), Music, Apps (App Store), Settings, Mail, Ments, Dark Chat, Adverts, Garage,
+Wallet (Lemon Pay), Music, Apps (the app store), Settings, Mail, Ments, Dark Chat, Adverts, Garage,
 Services, Files, Voice Memos, Compass, Calculator and the games (Chess, Blockade, Sugar Rush, 2048,
-Snake, Mines) - plus the Dynamic Island, widgets, the admin panel, 13 languages and
+Snake, Mines) - plus Lemon Pulse, widgets, the admin panel, 13 languages and
 [custom apps](../developers/custom-apps/).
 
 ## What the full version adds

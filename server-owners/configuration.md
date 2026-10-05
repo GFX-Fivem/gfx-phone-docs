@@ -17,8 +17,8 @@ Some useful places:
 
 | Page / group | What you set there |
 |---|---|
-| App access | Switch any app off for every player (it leaves the home screen and the App Store) |
-| App Store | One-time prices and subscriptions for apps, subscription period |
+| App access | Switch any app off for every player (it leaves the home screen and the Apps store) |
+| Apps store | One-time prices and subscriptions for apps, subscription period |
 | Custom apps | Allow apps from other resources, the largest in-app payment |
 | Currency | Symbol, format and decimals for every amount on the phone |
 | Calls | Voice resource, speaker range, call quality |

@@ -1,14 +1,14 @@
 ---
-title: "Notifications & Dynamic Island"
+title: "Notifications & Lemon Pulse"
 parent: Custom Apps
 grand_parent: Developers
 nav_order: 5
-description: "Push notifications, Dynamic Island live activities and app badges for FiveM phone apps on GFX Phone."
+description: "Push notifications, Lemon Pulse activities and app badges for FiveM phone apps on GFX Phone."
 ---
-# Notifications, Dynamic Island and Badges for FiveM Phone Apps
+# Notifications, Lemon Pulse and Badges for FiveM Phone Apps
 
-Custom apps on [GFX Phone](https://gfxscripts.com/phone) get the same notification system and Dynamic
-Island as the phone's own apps.
+Custom apps on [GFX Phone](https://gfxscripts.com/phone) get the same notification system and Lemon
+Pulse as the phone's own apps.
 
 ## Push notifications
 
@@ -37,7 +37,10 @@ GFXPhone.on('intent', (data) => {
 })
 ```
 
-## Dynamic Island live activities
+## Lemon Pulse activities
+
+**Lemon Pulse** is the live area around the camera at the top of the GFX Phone screen: it grows to
+show what is going on right now - a call, a timer, music, a delivery - and the player can expand it.
 
 Permission: `island`. Up to 2 activities per app.
 

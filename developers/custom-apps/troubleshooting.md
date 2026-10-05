@@ -13,7 +13,7 @@ description: "Fix common GFX Phone custom app problems: app not showing, blank s
 - Print what `AddCustomApp` returns: `false, err` tells you why (`invalidUi`, `reserved`...).
 - The server owner may have turned custom apps off (admin panel > Custom apps) or your app off
   (App access).
-- `defaultApp = false` apps are in the App Store, not on the home screen, until installed.
+- `defaultApp = false` apps are in the Apps store, not on the home screen, until installed.
 
 **Blank screen when the app opens**
 - The page and its scripts / styles are listed in your `fxmanifest.lua` `files { }`.

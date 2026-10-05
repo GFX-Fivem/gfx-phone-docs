@@ -82,7 +82,7 @@ Call it after `ready()` and on every `context` event.
 | `send(action, data)` | your client `onMessage`'s return value |
 | `state.get(key)` / `state.set(key, value)` | values kept while the game runs (64 KB per app) |
 | `notify({ title, body?, id?, image?, group?, data? })` | `{ id }` |
-| `island.start(key, activity)` / `island.update(key, activity)` / `island.end(key)` | see [Dynamic Island](notifications-and-dynamic-island.md) |
+| `island.start(key, activity)` / `island.update(key, activity)` / `island.end(key)` | see [Lemon Pulse](notifications-and-lemon-pulse.md) |
 | `widgets.update(widget, data)` | see [Widgets](widgets.md) |
 | `network.status()` / `battery.status()` | as in the context |
 | `camera.takePhoto()` | `{ url }` - the phone's Camera over your app, shot uploaded |

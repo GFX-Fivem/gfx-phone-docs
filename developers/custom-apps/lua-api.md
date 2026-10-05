@@ -19,7 +19,7 @@ calling resource's own app (checked with `GetInvokingResource()`).
 | `SendCustomAppMessage(id, action, data)` | the page gets `GFXPhone.on('message', { action, data })` |
 | `SendCustomAppNotification(id, n)` | `n = { title, body?, image?, data?, id? }` |
 | `SetCustomAppBadge(id, n)` | the red count on the icon (0 clears) |
-| `StartCustomAppIsland(id, key, activity)` | a Dynamic Island live activity |
+| `StartCustomAppIsland(id, key, activity)` | a Lemon Pulse activity |
 | `UpdateCustomAppIsland(id, key, activity)` | |
 | `EndCustomAppIsland(id, key)` | |
 | `UpdateCustomAppWidget(id, widget, data)` | a home-screen widget's content |
@@ -53,7 +53,7 @@ For apps also registered on the server:
 ```lua
 local phone = exports['gfx-phone']
 
--- A delivery job: live activity + widget + notification.
+-- A delivery job: Lemon Pulse activity + widget + notification.
 RegisterNetEvent('myjob:client:started', function(stops)
     phone:StartCustomAppIsland('deliveries', 'route', {
         leading = { icon = 'app' }, trailing = ('0/%d'):format(stops),

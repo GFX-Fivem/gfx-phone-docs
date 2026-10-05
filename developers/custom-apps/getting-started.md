@@ -52,7 +52,7 @@ AddEventHandler('gfx-phone:client:customAppsReady', function()
         label = 'My App',                 -- or { en = 'My App', de = 'Meine App' }
         ui = 'ui/index.html',             -- a file of THIS resource
         icon = 'ui/icon.png',
-        defaultApp = true,                -- on every phone; false = App Store listing
+        defaultApp = true,                -- on every phone; false = Apps store listing
         permissions = { 'notifications' },
     })
     if not ok then print('AddCustomApp failed: ' .. tostring(err)) end
@@ -139,12 +139,12 @@ by accident.
 
 ## Screen, sizes and lifetime
 
-- The phone screen is **384 x 832** CSS pixels. Keep content clear of the status bar / Dynamic Island
+- The phone screen is **384 x 832** CSS pixels. Keep content clear of the status bar / Lemon Pulse
   (54 px, `ctx.device.safeTop`) and the home indicator (34 px, `ctx.device.safeBottom`).
 - Keep your page background transparent (or your own colour): `ground` in the registration shows
   under it while it loads.
 - The page is unloaded when the player puts the phone away and loaded again when they reopen it -
-  like a suspended iOS app. Keep state in `GFXPhone.state`, your NUI callbacks or your server.
+  like a suspended phone app. Keep state in `GFXPhone.state`, your NUI callbacks or your server.
 - FiveM's browser is Chromium 103: no `:has()`, no `color-mix()`, no container queries.
 
 Next: [SDK reference](sdk-reference.md) · [Widgets](widgets.md) · [Payments](payments.md)
