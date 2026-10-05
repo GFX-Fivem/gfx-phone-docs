@@ -1,0 +1,64 @@
+title: GFX Phone Docs
+description: >-
+  Documentation for GFX Phone, the iOS-style phone for FiveM (QBCore, Qbox, ESX): installation,
+  the admin panel, configuration, exports and the custom apps SDK.
+url: https://gfx-fivem.github.io
+baseurl: /gfx-phone-docs
+lang: en
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+# Search engines: one author / publisher for every page (jekyll-seo-tag).
+author: GFX Scripts
+social:
+  name: GFX Scripts
+  links:
+    - https://gfxscripts.com
+    - https://github.com/GFX-Fivem
+twitter:
+  card: summary
+
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: Back to top
+
+aux_links:
+  "Get GFX Phone": https://gfxscripts.com/phone
+  "Live demo": https://gfxscripts.com/phone
+aux_links_new_tab: false
+
+nav_external_links:
+  - title: GFX Phone (product page)
+    url: https://gfxscripts.com/phone
+    hide_icon: false
+  - title: Server owner portal
+    url: https://phone.gfxscripts.com
+
+gh_edit_link: true
+gh_edit_link_text: Edit this page on GitHub
+gh_edit_repository: https://github.com/GFX-Fivem/gfx-phone-docs
+gh_edit_branch: main
+gh_edit_view_mode: tree
+
+footer_content: >-
+  <a href="https://gfxscripts.com/phone">GFX Phone</a> - the iOS-style FiveM phone for QBCore, Qbox
+  and ESX by <a href="https://gfxscripts.com">GFX Scripts</a>.
+  Documentation, SDK and examples are MIT licensed.
+
+exclude:
+  - README.md
+  - LICENSE
+  - examples/**/*.lua
+  - Gemfile
+  - Gemfile.lock
+  - vendor

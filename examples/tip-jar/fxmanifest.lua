@@ -1,5 +1,5 @@
 -- Example custom app for GFX Phone (https://gfxscripts.com/phone).
--- Docs: https://github.com/GFX-FIVEM/gfx-phone-custom-apps . Copy this folder into your resources,
+-- Docs: https://github.com/GFX-Fivem/gfx-phone-docs . Copy this folder into your resources,
 -- rename it if you like and `ensure` it after gfx-phone.
 fx_version 'cerulean'
 game 'gta5'

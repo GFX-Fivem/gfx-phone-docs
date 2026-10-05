@@ -1,3 +1,10 @@
+---
+title: "SDK Reference"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 3
+description: "window.GFXPhone reference: context, theme, events, every method, sheets and error codes of the GFX Phone JavaScript SDK."
+---
 # GFX Phone SDK Reference (`window.GFXPhone`)
 
 The JavaScript SDK connects your custom app's page to the [GFX Phone](https://gfxscripts.com/phone).
@@ -7,7 +14,7 @@ Load it from the phone:
 <script src="https://cfx-nui-gfx-phone/web/build/sdk/gfx-phone-sdk.js"></script>
 ```
 
-TypeScript: copy [`sdk/gfx-phone-sdk.d.ts`](../sdk/gfx-phone-sdk.d.ts) into your project. Plain
+TypeScript: copy [`sdk/gfx-phone-sdk.d.ts`](https://github.com/GFX-Fivem/gfx-phone-docs/blob/main/sdk/gfx-phone-sdk.d.ts) into your project. Plain
 ES2019, no dependencies.
 
 Every call returns a Promise. A refused call rejects with an `Error` whose `code` says why.
@@ -129,7 +136,3 @@ after 15 s.
 - **Keys:** Escape (put the phone away) and Backspace outside a text field (back) go to the phone.
 - **Zoom:** when the phone's scale does not reach into your frame (it differs between CEF builds), the
   SDK zooms your page to the phone's layout width, and again on every resize.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

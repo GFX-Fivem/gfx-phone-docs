@@ -1,3 +1,10 @@
+---
+title: "Notifications & Dynamic Island"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 5
+description: "Push notifications, Dynamic Island live activities and app badges for FiveM phone apps on GFX Phone."
+---
 # Notifications, Dynamic Island and Badges for FiveM Phone Apps
 
 Custom apps on [GFX Phone](https://gfxscripts.com/phone) get the same notification system and Dynamic
@@ -66,7 +73,3 @@ GFXPhone.setBadge(3)   // 0 clears it
 ```
 
 Lua: `SetCustomAppBadge(id, n)`.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

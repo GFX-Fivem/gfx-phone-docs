@@ -1,3 +1,10 @@
+---
+title: "Security"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 9
+description: "How GFX Phone sandboxes custom apps: iframe sandbox, bridge checks, player consent and server-side money."
+---
 # Security Model of GFX Phone Custom Apps
 
 Custom apps run other resources' code on the player's phone, so [GFX Phone](https://gfxscripts.com/phone)
@@ -45,7 +52,3 @@ per app and can be changed in Settings.
 
 64 custom apps per server, 2 island activities and 4 widgets per app, 64 KB per request and per app
 state, 30 requests a second per frame; sheets and payments have their own lower limits.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

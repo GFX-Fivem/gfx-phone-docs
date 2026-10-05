@@ -1,4 +1,4 @@
--- Example custom app - client (https://github.com/GFX-FIVEM/gfx-phone-custom-apps)
+-- Example custom app - client (https://github.com/GFX-Fivem/gfx-phone-docs)
 
 local APP = 'tipjar'
 local phone = exports['gfx-phone']

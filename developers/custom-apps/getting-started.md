@@ -1,3 +1,10 @@
+---
+title: "Getting Started"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 1
+description: "Build your first FiveM phone app for GFX Phone: resource layout, registration, the page, your own NUI callbacks and hot reload."
+---
 # Getting Started with GFX Phone Custom Apps (FiveM)
 
 This guide takes you from an empty folder to your own app on the [GFX Phone](https://gfxscripts.com/phone)
@@ -141,7 +148,3 @@ by accident.
 - FiveM's browser is Chromium 103: no `:has()`, no `color-mix()`, no container queries.
 
 Next: [SDK reference](sdk-reference.md) · [Widgets](widgets.md) · [Payments](payments.md)
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

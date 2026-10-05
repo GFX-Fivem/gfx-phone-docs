@@ -1,4 +1,4 @@
-// Example custom app page (https://github.com/GFX-FIVEM/gfx-phone-custom-apps). Plain JS: CEF 103 runs ES2020.
+// Example custom app page (https://github.com/GFX-Fivem/gfx-phone-docs). Plain JS: CEF 103 runs ES2020.
 const $ = (id) => document.getElementById(id)
 
 // This resource's own NUI callbacks (client.lua RegisterNUICallback).

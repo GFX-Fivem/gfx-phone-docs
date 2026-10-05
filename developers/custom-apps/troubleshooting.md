@@ -1,3 +1,10 @@
+---
+title: "Troubleshooting"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 10
+description: "Fix common GFX Phone custom app problems: app not showing, blank screen, ready() timeout, notActive."
+---
 # Troubleshooting GFX Phone Custom Apps
 
 **The app does not show on the phone**
@@ -36,7 +43,3 @@ Send data with `UpdateCustomAppWidget` / `GFXPhone.widgets.update`, or give the 
 in the registration.
 
 Still stuck? Get support through [gfxscripts.com](https://gfxscripts.com).
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

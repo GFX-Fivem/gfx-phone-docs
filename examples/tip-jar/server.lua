@@ -1,4 +1,4 @@
--- Example custom app - server (https://github.com/GFX-FIVEM/gfx-phone-custom-apps)
+-- Example custom app - server (https://github.com/GFX-Fivem/gfx-phone-docs)
 --
 -- Registering on the server too makes the server trust the app: payments are charged here and
 -- reported to onPayment, and the admin panel's App access lists it.

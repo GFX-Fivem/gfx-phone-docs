@@ -1,3 +1,10 @@
+---
+title: "Registration (AddCustomApp)"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 2
+description: "Every AddCustomApp field, permissions and client vs server registration for GFX Phone custom apps."
+---
 # Registering a Custom App (`AddCustomApp`)
 
 `exports['gfx-phone']:AddCustomApp(def)` puts your app on the [GFX Phone](https://gfxscripts.com/phone).
@@ -75,7 +82,3 @@ end)
 
 Its app disappears from every phone. Its place on the home screen (and its widgets) is kept, and it
 comes back there when the resource starts again. `RemoveCustomApp(id)` does the same on purpose.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

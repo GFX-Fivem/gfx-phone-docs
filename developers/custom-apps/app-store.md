@@ -1,3 +1,10 @@
+---
+title: "App Store Listing"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 8
+description: "List and sell your custom app in the GFX Phone App Store."
+---
 # Listing Your App in the GFX Phone App Store
 
 Instead of putting your app on every home screen, you can list it in the phone's App Store: players
@@ -28,7 +35,3 @@ exports['gfx-phone']:AddCustomApp({
 - An app registered only on the client is listed free and its downloads are not counted.
 
 `subtitle` and `description` can be given per language: `{ en = '...', de = '...' }`.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

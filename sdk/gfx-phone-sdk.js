@@ -1,6 +1,6 @@
 /*!
  * gfx-phone SDK - for custom apps shown on the GFX Phone (https://gfxscripts.com/phone).
- * Docs: https://github.com/GFX-FIVEM/gfx-phone-custom-apps
+ * Docs: https://github.com/GFX-Fivem/gfx-phone-docs
  *
  *   <script src="https://cfx-nui-gfx-phone/web/build/sdk/gfx-phone-sdk.js"></script>
  *   const ctx = await GFXPhone.ready()

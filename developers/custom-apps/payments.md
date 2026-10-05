@@ -1,3 +1,10 @@
+---
+title: "Payments (Lemon Pay)"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 7
+description: "In-app payments for FiveM phone apps with Lemon Pay: free amounts, server-created payments, refunds."
+---
 # In-App Payments with Lemon Pay (FiveM Phone)
 
 Custom apps on [GFX Phone](https://gfxscripts.com/phone) can charge the player through **Lemon Pay**,
@@ -68,7 +75,3 @@ Every charge also fires `gfx-phone:server:customAppPayment (src, appId, payment)
 - The admin panel's **Custom apps** switch off refuses every custom app payment; App access off
   refuses that app's.
 - The wallet balance and transaction list on the phone update with the server's answer.
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)

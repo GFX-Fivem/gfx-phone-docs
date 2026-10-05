@@ -1,5 +1,5 @@
 /**
- * GFX Phone SDK types - https://github.com/GFX-FIVEM/gfx-phone-custom-apps (GFX Phone: https://gfxscripts.com/phone). Load the script from
+ * GFX Phone SDK types - https://github.com/GFX-Fivem/gfx-phone-docs (GFX Phone: https://gfxscripts.com/phone). Load the script from
  * https://cfx-nui-gfx-phone/web/build/sdk/gfx-phone-sdk.js; it sets `window.GFXPhone`.
  *
  * Every call returns a Promise. A refused call rejects with an Error whose `code` is one of

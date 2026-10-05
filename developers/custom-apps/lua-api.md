@@ -1,3 +1,10 @@
+---
+title: "Custom App Exports"
+parent: Custom Apps
+grand_parent: Developers
+nav_order: 4
+description: "Client and server Lua exports and events for GFX Phone custom apps."
+---
 # GFX Phone Custom Apps - Lua API (Exports and Events)
 
 Every export below is on `exports['gfx-phone']`. Every call except `AddCustomApp` acts only on the
@@ -64,7 +71,3 @@ RegisterNetEvent('myjob:client:progress', function(done, stops)
     end
 end)
 ```
-
----
-
-Part of the [GFX Phone Custom Apps SDK](../README.md) · [GFX Phone for FiveM](https://gfxscripts.com/phone) by [GFX Scripts](https://gfxscripts.com)
