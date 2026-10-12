@@ -49,6 +49,17 @@ if ok then print('new number', meta.number) end
 | `GetCallMembers(src)` | Every player on `src`'s call, `src` included (`{}` when not on one) |
 | `IsCallMuted(src)` | `true` while `src` has their call muted |
 
+## Special numbers
+
+Phone numbers your script answers - hotlines, keypad menus, hold music. Guide: [Special numbers](special-numbers.md).
+
+| Export | |
+|---|---|
+| `RegisterSpecialNumber(number, def)` | A line your resource answers (`label`, `ringSeconds`, `audio`, `onStart`, `onKey`, `onEnd`...) -> `true` \| `false, err` |
+| `RemoveSpecialNumber(number)` / `IsSpecialNumber(number)` | Removes a line / is it one |
+| `PlaySpecialCallAudio(src, url, { loop?, volume? })` / `StopSpecialCallAudio(src)` | A sound in the caller's earpiece |
+| `EndSpecialCall(src)` / `GetSpecialCall(src)` | Hangs the line up / the call `src` is on |
+
 ## Device
 
 | Export | |

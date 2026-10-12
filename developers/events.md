@@ -27,6 +27,7 @@ Use `AddEventHandler` on the server.
 | `gfx-phone:idcards:shown` | `src, target, card` | `src` presented `card` to `target` |
 | `gfx-phone:haven:sold` | `{ script, propertyId, price, buyer, seller?, mode }` | A property was bought through Home (route a realtor's cut from here) |
 | `gfx-phone:server:customAppPayment` | `src, appId, payment` | A custom app payment was charged |
+| `gfx-phone:specialCall:started` / `key` / `ended` | `src, number, call` / `src, number, key, call` / `src, number, reason, call` | A [special number](special-numbers.md) answered, heard a keypad digit, ended |
 
 ### Voice integration
 

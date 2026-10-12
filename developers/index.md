@@ -16,6 +16,7 @@ cards, react to calls in your voice script, and build complete phone apps of you
 | [Server exports](server-exports.md) | Identity, SIM cards, calls, device, mail, bills, emergency services, ID cards, housing, apps |
 | [Client exports](client-exports.md) | Signal, Wi-Fi, battery, voice quality, music |
 | [Events](events.md) | Server and client events to listen to or trigger |
+| [Special numbers](special-numbers.md) | Phone numbers your script answers: hotlines, keypad menus, custom sounds |
 | [Custom apps](custom-apps/) | Your own phone app: JavaScript SDK, notifications, widgets, payments |
 
 ## Calling an export

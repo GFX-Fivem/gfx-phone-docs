@@ -38,7 +38,7 @@ sections:
 | `Config.Account` | Lemon Account mode (`item` / `character`), e-mail domain |
 | `Config.Device` | Phone item, battery, chargers, power bank, cases, cracks, water damage, LemonBuds |
 | `Config.Sim` | SIM item, slots, SIM tray, number prefix and digits |
-| `Config.Calls` | Voice resource, video calls, speaker |
+| `Config.Calls` | Voice resource, video calls, speaker, [special numbers](../developers/special-numbers.md) (lines a script answers) |
 | `Config.Messages`, `Config.Mail`, `Config.Gif` | Messaging, mail, GIF search |
 | `Config.Media` | Photo / video storage (Fivemanage) |
 | `Config.Wallet`, `Config.Billing` | Lemon Pay, company accounts, billing script |
