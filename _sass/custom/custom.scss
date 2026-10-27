@@ -1,0 +1,799 @@
+// GFX Phone docs: the look of gfxscripts.com/phone on top of Just the Docs.
+// Colours come from _sass/color_schemes/gfx.scss, type and sizes from _sass/custom/setup.scss.
+// stylelint-disable selector-no-type, selector-max-type, max-nesting-depth, selector-max-specificity, selector-max-compound-selectors
+
+$gfx-card: #101012;
+$gfx-card-raised: #1c1c1e;
+$gfx-ring: rgba(255, 255, 255, 0.08);
+$gfx-ring-soft: rgba(255, 255, 255, 0.06);
+$gfx-bar: rgba(22, 22, 23, 0.8);
+$gfx-blue: #0071e3;
+$gfx-blue-hover: #0077ed;
+$gfx-link: #2997ff;
+$gfx-grey: #86868b;
+$gfx-white: #f5f5f7;
+
+html {
+  background-color: #000;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba($gfx-link, 0.35);
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+// ---------------------------------------------------------------------------------------------
+// The bar: one slim frosted strip across the top, like the /phone header. The sidebar's title
+// cell and the main header share its colour, height and hairline so they read as one bar.
+
+.side-bar .site-header,
+.main-header {
+  background-color: $gfx-bar;
+  border-bottom: 1px solid $gfx-ring;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.side-bar {
+  border-right-color: $gfx-ring-soft;
+}
+
+// Mobile: the title row stays on screen while the page scrolls.
+.side-bar .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: $header-height;
+
+  @include mq(md) {
+    position: static;
+    min-height: 0;
+  }
+}
+
+@include mq(md) {
+  .side-bar + .main .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: $gfx-bar;
+
+    // The bar runs on to the right edge of the window past the centred content column.
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: 100%;
+      width: 100vw;
+      content: "";
+      background-color: $gfx-bar;
+      border-bottom: 1px solid $gfx-ring;
+    }
+  }
+}
+
+// ...and to the left edge: on wide screens the sidebar's title cell spans the whole sidebar.
+@include mq(lg) {
+  .side-bar .site-header {
+    width: 100%;
+    padding-left: calc(100% - #{$nav-width});
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.site-title {
+  gap: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.0625rem !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: $gfx-white;
+
+  &:hover {
+    background-image: none;
+    opacity: 0.85;
+  }
+}
+
+.gfx-mark {
+  flex: none;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.gfx-title-sub {
+  font-weight: 400;
+  color: $gfx-grey;
+}
+
+.site-button {
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    background-image: none;
+    color: #fff;
+  }
+
+  .icon {
+    color: currentcolor;
+  }
+}
+
+// The pill beside the menu button on small screens: back to the product page.
+.gfx-header-pill {
+  flex: none;
+  align-self: center;
+  margin-right: 0.25rem;
+
+  @include mq(md) {
+    display: none !important;
+  }
+}
+
+// Desktop links on the right of the bar: GFX Phone, then the Demo and Get it pills, as on /phone.
+.aux-nav {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem !important;
+
+  .aux-nav-list {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .aux-nav-list-item {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  .site-button {
+    height: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+  }
+
+  .aux-nav-list-item:nth-child(2) .site-button,
+  .aux-nav-list-item:nth-child(3) .site-button {
+    padding: 0.25rem 0.6875rem;
+    border-radius: 999px;
+    transition: background-color 0.2s;
+  }
+
+  .aux-nav-list-item:nth-child(2) .site-button {
+    color: $gfx-blue;
+    background-color: #fff;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .aux-nav-list-item:nth-child(3) .site-button {
+    color: #fff;
+    background-color: $gfx-blue;
+
+    &:hover {
+      background-color: $gfx-blue-hover;
+    }
+  }
+
+  @include mq(md) {
+    padding-right: 1rem;
+  }
+}
+
+// When the menu opens on a phone, the same links sit in a row under the search field.
+.main-header.nav-open .aux-nav {
+  padding: 0.25rem 1rem 0.75rem;
+
+  .aux-nav-list {
+    flex-wrap: wrap;
+  }
+
+  .aux-nav-list-item:first-child .site-button {
+    padding-left: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Search: a rounded field inside the bar, results on a dark card.
+
+.search-input-wrap {
+  border-radius: 10px;
+  box-shadow: none;
+
+  @include mq(md) {
+    top: 0.5rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 20rem;
+    height: calc(100% - 1rem) !important;
+    border-radius: 10px;
+  }
+}
+
+.search-input {
+  color: $gfx-white;
+  background-color: $gfx-card-raised;
+  border-radius: 10px;
+
+  @include mq(md) {
+    padding-left: 2.25rem;
+    font-size: 0.8125rem;
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: inset 0 0 0 1px $gfx-ring;
+  }
+
+  &::placeholder {
+    color: $gfx-grey;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px rgba($gfx-link, 0.6);
+  }
+}
+
+.search-label {
+  @include mq(md) {
+    padding-left: 0.75rem;
+  }
+
+  .search-icon {
+    width: 1rem;
+    height: 1rem;
+    color: $gfx-grey;
+  }
+}
+
+.search {
+  @include mq(md) {
+    // Clear of the right-hand links.
+    max-width: 24rem;
+  }
+}
+
+.search-active {
+  .search-input-wrap {
+    @include mq(md) {
+      top: 0.5rem;
+      left: 1rem;
+      height: 2.25rem !important;
+      border-radius: 10px;
+      box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .search-input {
+    background-color: $gfx-card-raised;
+  }
+
+  .search-label {
+    @include mq(md) {
+      padding-left: 0.75rem;
+    }
+  }
+
+  .search-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.search-results {
+  background-color: $gfx-card-raised;
+  border-radius: 14px;
+  box-shadow:
+    0 0 0 1px $gfx-ring,
+    0 1.5rem 4rem rgba(0, 0, 0, 0.6);
+
+  @include mq(md) {
+    top: calc(100% + 0.25rem);
+    left: 1rem;
+  }
+}
+
+.search-results-list-item {
+  .search-result {
+    border-radius: 10px;
+  }
+
+  &:hover,
+  &.active {
+    .search-result {
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+  }
+}
+
+.search-result-title {
+  color: $gfx-white;
+}
+
+.search-result-doc-title,
+.search-result-section {
+  color: $gfx-white;
+}
+
+.search-result-rel-url {
+  color: $gfx-grey;
+}
+
+.search-result-highlight {
+  font-weight: 600;
+  color: $gfx-link;
+}
+
+.search-no-result {
+  color: $gfx-grey;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Sidebar navigation: quiet grey links, the current page in white on a soft rounded fill.
+
+.site-nav {
+  @include mq(md) {
+    padding-top: 1.5rem;
+  }
+}
+
+.nav-list .nav-list-item {
+  .nav-list-link {
+    margin: 1px 0.5rem;
+    color: #d2d2d7;
+    border-radius: 8px;
+    transition: color 0.15s, background-color 0.15s;
+
+    @include mq(md) {
+      padding-left: 1rem;
+    }
+
+    &:hover {
+      color: #fff;
+      background-image: none;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &.active {
+      color: #fff;
+      background-image: none;
+      background-color: rgba(255, 255, 255, 0.09);
+    }
+
+    &.external > svg {
+      color: $gfx-grey;
+    }
+  }
+
+  .nav-list-expander {
+    margin-right: 0.5rem;
+    color: $gfx-grey;
+    border-radius: 8px;
+
+    &:hover {
+      color: #fff;
+      background-image: none;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  > .nav-list {
+    padding-left: 0.625rem;
+
+    .nav-list-item .nav-list-link {
+      color: $gfx-grey;
+
+      &:hover,
+      &.active {
+        color: #fff;
+      }
+    }
+
+    .nav-list-item .nav-list-expander {
+      color: $gfx-grey;
+    }
+  }
+}
+
+// The product links under the docs (GFX Phone, the server owner portal).
+.site-nav > .nav-list:last-child {
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid $gfx-ring-soft;
+}
+
+.nav-category {
+  color: $gfx-grey;
+  border-bottom-color: $gfx-ring-soft;
+}
+
+.site-footer {
+  color: $gfx-grey;
+
+  a {
+    color: #a1a1a6;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Page text: large, tight, semibold headings in near white, grey body copy.
+
+.main-content {
+  color: $body-text-color;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+
+  @include mq(md) {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gfx-white;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 2.75rem) !important;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.5rem, 3vw, 1.75rem) !important;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  h3 {
+    margin-top: 2.25rem;
+    font-size: 1.25rem !important;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 1.0625rem !important;
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+
+  h5,
+  h6 {
+    font-size: 1rem !important;
+  }
+
+  // The home page title.
+  h1.fs-9 {
+    font-size: clamp(2.5rem, 7vw, 3.75rem) !important;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+  }
+
+  .fs-6.fw-300 {
+    max-width: 36rem;
+    margin-top: 0;
+    font-size: clamp(1.125rem, 2.2vw, 1.3125rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.45;
+    color: $body-text-color;
+  }
+
+  strong,
+  b {
+    color: #d2d2d7;
+    font-weight: 600;
+  }
+
+  a {
+    color: $gfx-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a code {
+    color: $gfx-link;
+  }
+
+  hr {
+    height: 1px;
+    margin: 2.5rem 0;
+    background-color: $gfx-ring;
+  }
+
+  ul,
+  ol {
+    > li::before {
+      color: $gfx-grey;
+    }
+  }
+
+  blockquote {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    color: #d2d2d7;
+    background-color: $gfx-card;
+    border-left: 0;
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px $gfx-ring;
+  }
+
+  .anchor-heading svg {
+    color: $gfx-grey;
+  }
+}
+
+// Breadcrumbs: small grey path above the title.
+.breadcrumb-nav-list-item {
+  color: $gfx-grey;
+
+  a {
+    color: $gfx-grey;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &::after {
+    color: #6e6e73;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Buttons: rounded pills. Primary is the blue "Get it" pill, the plain one a dark ringed pill,
+// the green one (Get GFX Phone) the white pill of the product page.
+
+.btn {
+  padding: 0.55em 1.35em;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  &:focus,
+  &:focus:hover {
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+      0 0 0 3px rgba($gfx-link, 0.45);
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $gfx-blue;
+  background-image: none;
+  box-shadow: none;
+
+  &:hover,
+  &:active,
+  &.selected {
+    color: #fff;
+    background-color: $gfx-blue-hover;
+    background-image: none;
+  }
+}
+
+.btn-green {
+  color: #000;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+
+  &:hover,
+  &:active,
+  &.selected {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: none;
+  }
+}
+
+// Page links are blue; buttons in the page keep their own text colour.
+.main-content a.btn {
+  font-size: 1rem !important;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn-green {
+    color: #000;
+  }
+}
+
+// A white header pill (the mobile GFX Phone link) is a link too; keep its text white.
+.site-header a.btn {
+  color: #fff;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Code: inline code as a small dark chip, blocks as dark cards with a thin ring.
+
+:not(pre, figure) > code {
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+  color: #e5e5ea;
+  background-color: $gfx-card-raised;
+  border: 0;
+  border-radius: 6px;
+}
+
+a:visited code {
+  border-color: transparent;
+}
+
+div.highlighter-rouge,
+div.listingblock > div.content,
+figure.highlight {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: $gfx-card;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px $gfx-ring;
+}
+
+div.highlighter-rouge div.highlight,
+figure.highlight pre,
+pre.highlight {
+  background-color: transparent;
+}
+
+pre.highlight,
+figure.highlight pre {
+  padding: 1rem 1.125rem;
+}
+
+code {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+// The copy button in the corner of each block.
+.highlighter-rouge,
+figure.highlight {
+  > button {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.375rem;
+    color: $gfx-grey;
+    border-radius: 8px;
+
+    &:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    svg {
+      fill: currentcolor;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Tables: one dark rounded card with hairline rows.
+
+.table-wrapper {
+  margin-top: 1rem;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px $gfx-ring;
+  background-color: $gfx-card;
+}
+
+table {
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+  background-color: transparent;
+  border-bottom: 1px solid $gfx-ring-soft;
+  border-left: 0;
+}
+
+th {
+  font-weight: 600;
+  color: $gfx-white;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+thead th {
+  border-bottom: 1px solid $gfx-ring;
+}
+
+td {
+  color: $body-text-color;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Child page list, edit link, footer and back to top.
+
+.main-content .text-delta,
+.main-content h2.text-delta {
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: $gfx-grey;
+  text-transform: uppercase;
+}
+
+footer {
+  color: $gfx-grey;
+
+  a {
+    color: #a1a1a6;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .text-grey-dk-100,
+  p {
+    color: $gfx-grey !important;
+  }
+
+  .text-grey-dk-100 a {
+    color: #a1a1a6;
+  }
+
+  hr {
+    background-color: $gfx-ring;
+  }
+}
+
+.main-content-wrap footer {
+  margin-top: 3rem;
+}
+
+// Labels, should a page use them.
+.label,
+.label-blue {
+  background-color: rgba($gfx-blue, 0.2);
+  color: $gfx-link;
+  border-radius: 999px;
+}
+
+// Mermaid or any embedded figure: keep it on a card.
+.main-content img {
+  border-radius: 12px;
+}

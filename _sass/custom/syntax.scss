@@ -1,0 +1,34 @@
+// Code colours: a dark editor palette on the #101012 card, every token readable on it.
+.highlight,
+pre.highlight {
+  color: #f5f5f7;
+  background: $code-background-color;
+}
+
+.highlight {
+  .c, .ch, .cm, .c1, .cs, .cpf { color: #7f8c98; font-style: italic; }
+  .cp { color: #ffa14f; }
+  .err { color: #ff6961; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kv, .ow { color: #ff7ab2; font-weight: 600; }
+  .kt { color: #dabaff; }
+  .m, .mb, .mf, .mh, .mi, .il, .mo, .mx { color: #d9c97c; }
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .s1, .ss { color: #ff8170; }
+  .sr { color: #ff8170; }
+  .na { color: #67b7a4; }
+  .nb, .bp { color: #a167e6; }
+  .nc, .nn { color: #5dd8ff; }
+  .nf, .fm { color: #67b7a4; }
+  .n, .nx, .ni, .no, .nv, .py, .vc, .vg, .vi, .vm, .l, .ld, .x { color: #f5f5f7; }
+  .nl { color: #67b7a4; }
+  .ge { font-style: italic; }
+  .gs { font-weight: 600; }
+  .hll { background-color: rgba(255, 255, 255, 0.06); }
+  .nt { color: #ff7ab2; }
+  .nd { color: #ffa14f; }
+  .ne { color: #dabaff; }
+  .o, .p { color: #d2d2d7; }
+  .gd { color: #ff6961; }
+  .gi { color: #30d158; }
+  .gh, .gu { color: #2997ff; font-weight: 600; }
+  .w { color: #6e6e73; }
+}

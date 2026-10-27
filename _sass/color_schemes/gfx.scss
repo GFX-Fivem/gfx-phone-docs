@@ -1,0 +1,20 @@
+// GFX Phone: the dark look of gfxscripts.com/phone. Black page, dark cards with a thin white ring,
+// grey body text and the blue accent of its buttons and links.
+$color-scheme: dark;
+$body-background-color: #000;
+$body-heading-color: #f5f5f7;
+$body-text-color: #a1a1a6;
+$link-color: #2997ff;
+$nav-child-link-color: #86868b;
+$sidebar-color: #000;
+$base-button-color: #1c1c1e;
+$btn-primary-color: #0071e3;
+$code-background-color: #101012;
+$code-linenumber-color: #6e6e73;
+$feedback-color: #1c1c1e;
+$table-background-color: #101012;
+$search-background-color: #1c1c1e;
+$search-result-preview-color: #86868b;
+$border-color: rgba(255, 255, 255, 0.08);
+
+@import "./custom/syntax";

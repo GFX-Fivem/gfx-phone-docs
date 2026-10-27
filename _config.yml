@@ -28,14 +28,18 @@ social:
 twitter:
   card: summary
 
+color_scheme: gfx
+
 search_enabled: true
 heading_anchors: true
 back_to_top: true
 back_to_top_text: Back to top
 
+# The bar's right side, as on gfxscripts.com/phone: the product page, then the Demo and Get it pills.
 aux_links:
-  "Get GFX Phone": https://gfxscripts.com/phone
-  "Live demo": https://gfxscripts.com/phone
+  "GFX Phone": https://gfxscripts.com/phone
+  "Demo": https://gfxscripts.com/phone#demo
+  "Get it": https://gfxscripts.com/phone/pricing
 aux_links_new_tab: false
 
 nav_external_links:
