@@ -18,6 +18,8 @@ html {
   color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // Headings reached by a #link land below the bar, not under it.
+  scroll-padding-top: calc(#{$header-height} + 1rem);
 }
 
 ::selection {
@@ -53,15 +55,23 @@ a {
 
   @include mq(md) {
     position: static;
+    flex: none;
+    height: $header-height;
     min-height: 0;
   }
 }
 
+// Wide screens: the main header is fixed, like the sidebar's title cell beside it, so the two
+// halves of the bar never part (a sticky header moves with the page when it bounces at the top).
+// It sits over the content column: the sidebar's width on the left, the column's width at most.
 @include mq(md) {
   .side-bar + .main .main-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: $nav-width-md;
     z-index: 20;
+    max-width: $content-width;
     background-color: $gfx-bar;
 
     // The bar runs on to the right edge of the window past the centred content column.
@@ -75,6 +85,19 @@ a {
       background-color: $gfx-bar;
       border-bottom: 1px solid $gfx-ring;
     }
+  }
+}
+
+@include mq(md) {
+  .side-bar + .main .main-content-wrap {
+    padding-top: calc(#{$header-height} + #{$gutter-spacing});
+  }
+}
+
+@include mq(lg) {
+  .side-bar + .main .main-header {
+    // stylelint-disable-next-line function-name-case
+    left: Max(#{$nav-width}, calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}));
   }
 }
 
