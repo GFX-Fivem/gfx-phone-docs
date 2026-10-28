@@ -33,12 +33,25 @@ phone's setup wizard is finished.
 | `GetPhoneNumber(src)` | The active line's number, or `nil` |
 | `InsertSim(src, meta)` | Puts a SIM in the handset -> slot, or `nil` (no handset / no free slot) |
 | `ReloadSims(src)` | Re-reads the cards from the database and pushes them to the phone |
+| `SetPhoneNumber(src, number, slot?)` | A custom number for the card in `slot` (default: the active line) -> `true, number`, or `false` + `'invalid'` / `'noPhone'` / `'noSim'` / `'taken'` / `'unavailable'` / `'busy'` |
 
 ```lua
 -- A phone shop: give the buyer a new SIM card.
 local ok, meta = exports['gfx-phone']:GiveSim(source, { carrier = 'Fleeca Mobile' })
 if ok then print('new number', meta.number) end
 ```
+
+```lua
+-- A vanity number shop: the buyer's active line gets the number they picked.
+local ok, result = exports['gfx-phone']:SetPhoneNumber(source, '555-7777')
+if not ok then print('number not set:', result) end -- 'taken', 'invalid', ...
+```
+
+`SetPhoneNumber` takes digits and dashes, 3 to 24 characters. The number must be free: no other SIM
+card, business line or special number may use it (`555-7777` and `5557777` count as the same
+number). The player must be online. The old number works like a SIM card taken out of the phone:
+its one-to-one chats stay readable but closed, group chats move to the new number, and everyone the
+player texted with gets a "changed their number" message. The old number is free again for anyone.
 
 ## Calls
 
