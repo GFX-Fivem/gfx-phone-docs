@@ -72,8 +72,8 @@ dashboard issues new lines and signs every panel session out. Put the new lines 
 - **Configuration** - every setting of the phone, live, no restart. See [Configuration](configuration.md).
 - **Players and accounts** - look up any player's phone, lines, device and activity; read-only phone
   mirror; factory-reset one account.
-- **Moderation and approvals** - posts, profiles and businesses waiting for review in the social and
-  business apps.
+- **Moderation and approvals** - posts, profiles, businesses and Ments badge requests waiting for
+  review in the social and business apps.
 - **Coverage map and Wi-Fi** - draw signal zones and hotspots on the map.
 - **Languages** - add a language or change any text without touching files.
 - **Import** - bring data from another phone script. See [Import](importing-from-another-phone.md).

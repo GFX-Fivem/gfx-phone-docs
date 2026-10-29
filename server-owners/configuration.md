@@ -22,6 +22,7 @@ Some useful places:
 | Custom apps | Allow apps from other resources, the largest in-app payment |
 | Currency | Symbol, format and decimals for every amount on the phone |
 | Calls | Voice resource, speaker range, call quality |
+| Ments badges | Badge requests, the badge shop, what it is paid with, prices ([details](#ments-badges)) |
 | Coverage / Wi-Fi | Signal outside zones, hotspots, calls over Wi-Fi |
 | Languages | Server language, add languages, change any text |
 
@@ -57,3 +58,48 @@ sections:
 | `Config.Admin` | Admin groups, roles, web panel switches |
 
 Each key is explained by the comment above it in `config.lua`.
+
+## Ments badges
+
+A badge shows next to a Ments username: **Verified** (the blue check), **Government**, **Press** or
+**Business**. You can always give or take one in the admin panel (**Social profiles**). Players can
+also get one from the menu on their own Ments profile (**Account badge**), in two ways:
+
+- **Request** - the player picks a badge and writes why. The request waits on the panel's
+  **Approvals** page. Approve it and the badge appears at once; reject it and your note is shown to
+  the player.
+- **Shop** - the player buys a badge at once. Only badges with a price above 0 are sold. The badge
+  stays until an admin takes it away.
+
+Set it in the panel (**Configuration > Ments badges**) or in `config.lua`:
+
+```lua
+Config.Social.Ments.Badges = {
+    Requests = true,      -- players can request a badge (Approvals page)
+    Shop = true,          -- players can buy a badge
+    Currency = 'item',    -- 'money' | 'item' | 'export'
+    Item = 'coin',        -- Currency 'item': the item spent, one per price unit
+    Unit = 'Coins',       -- shown after the price ('item' / 'export')
+    Export = { Resource = '', Get = '', Remove = '', Add = '' },
+    Prices = { verified = 500, gov = 0, press = 1000, business = 1000 }, -- 0 = not for sale
+}
+```
+
+What the shop takes (`Currency`):
+
+| Value | Paid with |
+|---|---|
+| `money` | Bank money through Lemon Pay (shown on the player's statement). Prices use your [currency](#in-the-admin-panel-recommended) format |
+| `item` | An inventory item such as donator coins (`Item`), taken through gfx-lib |
+| `export` | The currency of another resource (a coin or points script), through its exports |
+
+With `export`, the phone calls your script's exports by the names you set:
+
+| Key | Called as | Must |
+|---|---|---|
+| `Get` | `exports[Resource]:Get(source)` | Return the player's balance |
+| `Remove` | `exports[Resource]:Remove(source, amount)` | Take the amount (returning `false` = not paid) |
+| `Add` | `exports[Resource]:Add(source, amount)` | Optional: give it back if the badge could not be set |
+
+If the badge cannot be set after the player paid, the price is refunded (bank money, the item, or
+your `Add` export).
