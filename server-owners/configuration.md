@@ -41,7 +41,7 @@ sections:
 | `Config.Sim` | SIM item, slots, SIM tray, number prefix and digits |
 | `Config.Calls` | Voice resource, video calls, speaker, [special numbers](../developers/special-numbers.md) (lines a script answers) |
 | `Config.Messages`, `Config.Mail`, `Config.Gif` | Messaging, mail, GIF search |
-| `Config.Media` | Photo / video storage (Fivemanage) |
+| `Config.Media` | Photo / video storage: Fivemanage or [your own upload service](custom-storage.md) |
 | `Config.Wallet`, `Config.Billing` | Lemon Pay, company accounts, billing script |
 | `Config.Services` | Police / EMS / fire dispatch and calls |
 | `Config.Garage`, `Config.CarKey`, `Config.Vehicles` | Garage, CarLink, vehicle keys scripts |

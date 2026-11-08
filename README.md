@@ -52,6 +52,7 @@ end)
 | [`server-owners/`](server-owners) | Installation and admin guides (the site's source) |
 | [`developers/`](developers) | Exports, events and custom apps guides |
 | [`examples/tip-jar`](examples/tip-jar) | A complete custom app resource: payments, Lemon Pulse, camera, widget |
+| [`examples/custom-upload`](examples/custom-upload) | An upload service for custom media storage (Cloudflare Worker + R2) |
 | [`sdk/`](sdk) | The custom app SDK script and its TypeScript types |
 
 ## About GFX Phone

@@ -14,7 +14,7 @@ description: "What a FiveM server needs to run GFX Phone: framework (QBCore, Qbo
 | **Database** | `oxmysql` (or another driver gfx-lib supports). |
 | **Inventory** | Any inventory gfx-lib supports. With item metadata (ox, qb / ps / lj, qs, codem, tgiann, origen, core, ak47, aty...) every phone item is its own handset and SIM cards keep their numbers; other inventories get one handset per character. |
 | **Outbound HTTPS** | The game server connects out to `phone.gfxscripts.com` for the web panel and licence checks. No open port, domain or certificate is needed on your side. |
-| **Fivemanage account** (recommended) | Stores the photos and videos players take. Free tier available at [fivemanage.com](https://fivemanage.com). Without it the camera cannot save photos. |
+| **Media storage** | Stores the photos, videos and voice messages players take: a **Fivemanage account** (free tier at [fivemanage.com](https://fivemanage.com)) or [your own upload service](custom-storage.md). Without one the camera cannot save photos. |
 | **GIPHY key** (optional) | GIF search in Messages. |
 
 ## Supported voice resources

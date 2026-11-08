@@ -51,13 +51,19 @@ See [Import from another phone](importing-from-another-phone.md).
 
 ## 5. Media storage
 
-Photos and videos taken with the phone are stored on **your own Fivemanage account**.
+Photos, videos and voice messages taken with the phone are stored on **your own storage**. Pick the
+**Storage provider**:
 
-1. Create an account at [fivemanage.com](https://fivemanage.com) and an API token (**Tokens**).
-2. Paste the key and press **Test key**.
+- **Fivemanage** (default)
+  1. Create an account at [fivemanage.com](https://fivemanage.com) and an API token (**Tokens**).
+  2. Paste the key and press **Test key**.
+- **Custom**: your own upload service (an S3 / R2 bucket behind a Worker, a Node, Python or PHP
+  uploader). Fill in the Upload URL, File field, Link path and Signing key, then press
+  **Test upload**. What your service has to do, a ready-made Cloudflare Worker and hosting without a
+  domain: [Custom storage](custom-storage.md).
 
-The key is kept in your database and never sent to players. Without a key the camera cannot save
-photos.
+Keys are kept in your database and never sent to players. Without storage the camera cannot save
+photos, so the wizard does not go on until one is set up.
 
 ## 6. GIF search (optional)
 
